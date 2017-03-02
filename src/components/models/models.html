@@ -1,0 +1,31 @@
+<!--
+  Generated template for the Models component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button clear icon-only (tap)="close()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span *ngIf="models">{{makeName}}  Modelleri</span>
+
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="models">
+
+<ion-card  *ngFor="let model of models" (tap)="getVersions(model)"> 
+  <img src="http://araba.net.tr/{{model.image}}">
+  <ion-card-content>
+    <h2>{{makeName}} {{model.name}}</h2>
+  </ion-card-content>
+</ion-card>
+</ion-content>
+
+

@@ -1,0 +1,171 @@
+car-details {
+
+ion-slides{
+  height: 50%;
+}
+
+/* wide-as-needed */
+.articles .tags {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.articles .categories-filter {
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.articles .filter-button {
+  padding: 5px;
+  border: 0px;
+}
+
+.articles .filter-button.active-filter-button {
+  font-style: italic;
+  font-weight: 700;
+}
+
+.search-box {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.article-slidebox {
+  position: relative;
+}
+
+.article-slidebox img {
+  max-width: 100%;
+}
+
+.home img {
+  display: inherit;
+}
+
+.article-slidebox .item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 40px;
+}
+
+.rating-container {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.rating-container ul.rating {
+  display: inline;
+}
+.rating-container ul.rating li i {
+  display: inline;
+  font-size: 20px;
+}
+
+div.set-rating ul.rating {
+  display: inline;
+}
+div.set-rating span {
+  vertical-align: super;
+  font-style: italic;
+}
+
+.comment-date {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-style: italic;
+}
+
+.item-background-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+.categories-filter {
+  background-color: #333;
+}
+
+.categories-filter .button.button-light {
+  background-color: transparent;
+  color: #fff;
+}
+
+.item.item-thumbnail-left {
+      border: 0;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.15);
+}
+
+
+.out .list {
+  margin-top: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.out ion-item:nth-child(odd) {
+  background-color: #EFEFEF;
+}
+
+.out ion-item {
+  padding: 5px;
+  border:0;
+}
+
+.tabs {
+  position: relative;
+}
+
+.row {
+  padding: 5px 5px 0px;
+}
+
+.row .col {
+  padding: 0px 5px;
+}
+
+.row .col p {
+  margin: 0;
+}
+
+.mTop20 {
+  margin-top: 20px;
+}
+
+.bgBlack {
+  background-color: #2956a2;
+  color: #fff;
+  margin-top: -6px;
+}
+
+.bgBlack h3 {
+  color: #fff;
+}
+
+.bgBlack p {
+  margin-bottom: 5px;
+}
+
+.tabs {
+  background: #fff;
+  background-image: none;
+}
+
+.tab-item.active {
+  border-bottom: 4px solid red;
+}
+
+
+.article-slidebox .item {
+    background: rgba(255, 255, 255, 0);
+}
+
+.slider-pager .slider-pager-page {
+    color: #fff;
+}
+}

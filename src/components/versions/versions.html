@@ -1,0 +1,37 @@
+<!--
+  Generated template for the Versions component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button clear icon-only (tap)="close()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span *ngIf="models">{{modelName}} Versiyonları</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+<ion-list  *ngIf="versions">
+  <ion-item *ngFor="let version of versions" (tap)="getDetails(version.id)">
+    <ion-thumbnail item-left>
+      <img src="http://araba.net.tr/{{model.image}}">
+    </ion-thumbnail>
+    <h2>{{version.name}}</h2>
+      <span *ngIf="version.fuelType == 1">Benzinli</span>
+      <span *ngIf="version.fuelType == 2">Dizel</span>
+      <span *ngIf="version.fuelType == 3">Hibrid</span>
+      <span *ngIf="version.fuelType == 4">Lpg</span>  
+    <span *ngIf="version.transmission == 1"> - Düz Vites</span>
+    <span *ngIf="version.transmission == 2"> - Otomatik Vites</span>
+    <button ion-button clear item-right>{{version.price}} TL</button>
+  </ion-item>
+</ion-list>
+</ion-content>
