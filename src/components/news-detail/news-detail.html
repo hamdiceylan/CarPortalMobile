@@ -1,0 +1,57 @@
+<!--
+  Generated template for the NewsDetail component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons left>
+      <button ion-button clear icon-only (tap)="close()">
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content *ngIf="newsDetail">
+<ion-card>
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img [src]="newsDetail.authorImageUrl">
+    </ion-avatar>
+    <h2>{{newsDetail.authorName}} {{newsDetail.authorSurname}}</h2>
+    <p>{{newsDetail.createTime}}</p>
+  </ion-item>
+
+  <img [src]="newsDetail.thumbnail">
+
+  <ion-card-content>
+    <p [innerHTML]="newsDetail.body"></p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+ </ion-content>

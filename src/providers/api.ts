@@ -46,4 +46,14 @@ export class Api {
       .map(res => res.json())
   }
 
+  getNews(){
+    return this.http.get(this.apiEndPoint + 'news')
+      .map(res => res.json())
+  }
+
+  getNewsbyId(newsId){
+    return this.http.get(this.apiEndPoint + 'news/'+newsId)
+      .map(res => res.json())
+  }
+
 }

@@ -1,3 +1,5 @@
+import { NewsDetailComponent } from './../components/news-detail/news-detail';
+import { NewsPage } from './../pages/news/news';
 import { CarDetailsComponent } from './../components/car-details/car-details';
 import { DetailsComponent } from './../components/details/details';
 import { VersionsComponent } from './../components/versions/versions';
@@ -20,7 +22,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage,
     ModelsComponent,
     VersionsComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    NewsPage,
+    NewsDetailComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -34,7 +38,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     TabsPage,
     ModelsComponent,
     VersionsComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    NewsPage,
+    NewsDetailComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Api]
 })
