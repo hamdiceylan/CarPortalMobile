@@ -15,7 +15,7 @@
 
 <ion-content>
 <ion-card *ngFor="let news of newsList" (click)="newsDetail(news.id)">
-  <img src="http://www.otomovi.com/wp-content/uploads/2017/03/bmw-3-696x392.jpg"/>
+  <img src="https://s3.eu-central-1.amazonaws.com/car-image-db/NewsImages/350/{{news.thumbnail}}"/>
   <ion-card-content>
     <ion-card-title>
       <b [innerHTML]="news.title"></b>

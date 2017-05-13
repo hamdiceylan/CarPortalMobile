@@ -40,7 +40,7 @@
     <ion-slides *ngIf="images" class="article-slidebox">
       <ion-slide *ngFor="let image of images">
         <div class="box blue article-slidebox">
-          <img [src]=image.imageFullPath/>
+          <img src="http://www.araba.net.tr/content/carcompare/{{image.imageFullPath}}"/>
           <div class="item">
           </div>
         </div>

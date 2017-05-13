@@ -20,7 +20,7 @@
 
 <ion-content>
 <ion-list  *ngIf="versions">
-  <ion-item *ngFor="let version of versions" (tap)="getDetails(version.id)">
+  <ion-item *ngFor="let version of versions" (tap)="getDetails(version.remoteId)">
     <ion-thumbnail item-left>
       <img src="http://araba.net.tr/{{model.image}}">
     </ion-thumbnail>
