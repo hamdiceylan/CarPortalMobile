@@ -12,6 +12,8 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AdMob } from '@ionic-native/admob';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,6 @@ import { TabsPage } from '../pages/tabs/tabs';
     NewsPage,
     NewsDetailComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Api]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Api,AdMob]
 })
 export class AppModule {}
