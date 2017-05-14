@@ -19,23 +19,6 @@
   </ion-toolbar>
 </ion-header>
 
-<!--<ion-content *ngIf="details">
-<ion-slides pager style="height: 50%;" class="article-slidebox">
-
-  <ion-slide>
-    <img src="http://arabalar1.cdn.tc/static-res/{{details.version.showCasePicture}}"/>
-  </ion-slide>
-    <ion-slide>
-    <img src="http://arabalar1.cdn.tc/static-res/{{details.version.showCasePicture}}"/>
-  </ion-slide>
-    <ion-slide>
-    <img src="http://arabalar1.cdn.tc/static-res/{{details.version.showCasePicture}}"/>
-  </ion-slide>
-
-</ion-slides>
-</ion-content>
--->
-
  <ion-content *ngIf="details">
     <ion-slides *ngIf="images" class="article-slidebox">
       <ion-slide *ngFor="let image of images">
@@ -46,13 +29,12 @@
         </div>
       </ion-slide>
     </ion-slides>
-
-   <div class="bgBlack padding">
+   <div class="bgBlack">
       <h3>{{details.version.feature.yil}} {{details.version.brandModel.brand.name}} {{details.version.brandModel.name}}
       {{details.version.name}}</h3>
     </div>
 
-<div padding>
+<div>
   <ion-segment [(ngModel)]="type">
     <ion-segment-button value="teknik">
       Teknik Özellikler
@@ -66,7 +48,13 @@
 <div [ngSwitch]="type">
   <ion-list *ngSwitchCase="'teknik'">
         <ion-grid>
+
         <ion-row>
+          <ion-col width-50><b>Fiyat</b></ion-col>
+          <ion-col width-50 class="price">{{details.version.feature.price}} TL</ion-col>
+        </ion-row>
+
+        <ion-row class="odd">
           <ion-col width-50><b>Silindir Hacmi</b></ion-col>
           <ion-col width-50>{{details.version.feature.silindirHacmi}} cc</ion-col>
         </ion-row>
@@ -76,7 +64,7 @@
           <ion-col width-50>{{details.version.feature.beygirGucu}} hp</ion-col>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="odd">
           <ion-col width-50><b>Şehiriçi Yakıt</b></ion-col>
           <ion-col width-50>{{details.version.feature.sehiriciYakit}} lt</ion-col>
         </ion-row>
@@ -86,7 +74,7 @@
           <ion-col width-50>{{details.version.feature.sehirdisiYakit}} lt</ion-col>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="odd">
           <ion-col width-50><b>Ort. Yakıt</b></ion-col>
           <ion-col width-50>{{details.version.feature.ortalamaYakit}} lt</ion-col>
         </ion-row>
@@ -97,7 +85,7 @@
           <ion-col width-50>{{details.version.feature.maksTork}} Nm</ion-col>
         </ion-row>
 
-         <ion-row>
+         <ion-row class="odd">
           <ion-col width-50><b>Lastik Ölçüleri</b></ion-col>
           <ion-col width-50>{{details.version.feature.lastikEbatlari}}</ion-col>
         </ion-row>
@@ -107,7 +95,7 @@
           <ion-col width-50>{{details.version.feature.hizlanma}} sn</ion-col>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="odd">
           <ion-col width-50><b>Uzunluk</b></ion-col>
           <ion-col width-50>{{details.version.feature.uzunluk}} mm</ion-col>
         </ion-row>
@@ -118,7 +106,7 @@
         </ion-row>
 
 
-        <ion-row>
+        <ion-row class="odd">
           <ion-col width-50><b>Yükseklik</b></ion-col>
           <ion-col width-50>{{details.version.feature.yukseklik}} mm</ion-col>
         </ion-row>
@@ -128,7 +116,7 @@
           <ion-col width-50>{{details.version.feature.bagajKapasitesi}} lt</ion-col>
         </ion-row>
 
-        <ion-row>
+        <ion-row class="odd">
           <ion-col width-50><b>Boş Ağırlık</b></ion-col>
           <ion-col width-50>{{details.version.feature.bosAgirlik}} kg</ion-col>
         </ion-row>   
@@ -144,7 +132,7 @@
         </ion-list>
 
   <ion-list *ngSwitchCase="'donanim'">
-      Donanım  
+      <ion-icon class="ion-checkmark-round"></ion-icon>
   </ion-list>
 </div>
 </ion-content>

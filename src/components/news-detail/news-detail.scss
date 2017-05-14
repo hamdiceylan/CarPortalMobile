@@ -1,6 +1,12 @@
 news-detail {
     
 ion-content {
-    margin-top:40px;
+    .lead{
+        font-weight: bold;
+    }
+    .card{
+        margin: 0;
+        width: calc(100%);
+    }
 }    
 }

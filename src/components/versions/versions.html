@@ -13,17 +13,17 @@
       </button>
     </ion-buttons>
     <ion-title>
-      <span *ngIf="models">{{modelName}} Versiyonları</span>
+      <span *ngIf="model">{{model.name}}</span>
     </ion-title>
   </ion-toolbar>
 </ion-header> 
 
 <ion-content>
 <ion-list  *ngIf="versions">
+  <img src="http://araba.net.tr/{{model.image}}">
+  <h2 *ngIf="model">{{makeName}} {{model.name}} Modelleri ve Fiyatlari</h2>
+  <p>Arac detaylari icin lutfen versiyon uzerine tiklayiniz.</p>
   <ion-item *ngFor="let version of versions" (tap)="getDetails(version.remoteId)">
-    <ion-thumbnail item-left>
-      <img src="http://araba.net.tr/{{model.image}}">
-    </ion-thumbnail>
     <h2>{{version.name}}</h2>
       <span *ngIf="version.fuelType == 1">Benzinli</span>
       <span *ngIf="version.fuelType == 2">Dizel</span>

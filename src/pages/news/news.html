@@ -13,15 +13,11 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="card-background-page">
+
 <ion-card *ngFor="let news of newsList" (click)="newsDetail(news.id)">
-  <img src="https://s3.eu-central-1.amazonaws.com/car-image-db/NewsImages/350/{{news.thumbnail}}"/>
-  <ion-card-content>
-    <ion-card-title>
-      <b [innerHTML]="news.title"></b>
-      </ion-card-title>
-      <p [innerHTML]="news.summary">
-      </p>
-  </ion-card-content>
+  <img [src]=news.thumbnail/>
+  <div class="card-title" [innerHTML]="news.title"></div>
 </ion-card>
+
 </ion-content>

@@ -12,45 +12,21 @@
         <ion-icon name="arrow-round-back"></ion-icon>
       </button>
     </ion-buttons>
+    <ion-title>
+      <span *ngIf="newsDetail">{{newsDetail.title}}</span>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
  <ion-content *ngIf="newsDetail">
 <ion-card>
 
-  <ion-item>
-    <ion-avatar item-left>
-      <img [src]="newsDetail.authorImageUrl">
-    </ion-avatar>
-    <h2>{{newsDetail.authorName}} {{newsDetail.authorSurname}}</h2>
-    <p>{{newsDetail.createTime}}</p>
-  </ion-item>
-
-  <img src="https://s3.eu-central-1.amazonaws.com/car-image-db/NewsImages/350/{{newsDetail.thumbnail}}">
+  <img [src]=newsDetail.thumbnail>
 
   <ion-card-content>
+    <p class="lead" [innerHTML]="newsDetail.title"></p>
     <p [innerHTML]="newsDetail.body"></p>
   </ion-card-content>
-
-  <ion-row>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>12 Likes</div>
-      </button>
-    </ion-col>
-    <ion-col>
-      <button ion-button icon-left clear small>
-        <ion-icon name="text"></ion-icon>
-        <div>4 Comments</div>
-      </button>
-    </ion-col>
-    <ion-col center text-center>
-      <ion-note>
-        11h ago
-      </ion-note>
-    </ion-col>
-  </ion-row>
 
 </ion-card>
 

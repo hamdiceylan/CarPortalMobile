@@ -18,13 +18,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="models">
+<ion-content *ngIf="models" class="card-background-page">
 
-<ion-card  *ngFor="let model of models" (tap)="getVersions(model)"> 
+<ion-card  *ngFor="let model of models" (tap)="getVersions(model,makeName)"> 
   <img src="http://araba.net.tr/{{model.image}}">
-  <ion-card-content>
-    <h2>{{makeName}} {{model.name}}</h2>
-  </ion-card-content>
+    <div class="card-title">{{makeName}} {{model.name}}</div>
 </ion-card>
 </ion-content>
 

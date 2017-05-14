@@ -1,7 +1,37 @@
 car-details {
 
 ion-slides{
-  height: 50%;
+  height: 45%;
+}
+
+    ion-segment{
+        background: #ffffff;
+        segment-button{
+            color:#edeef2;
+        }
+        .segment-button{
+           color:#102445 !important;
+           font-weight: bold !important;
+           border-color:silver !important;
+        }
+        .segment-activated{
+           background-color: #ffffff !important;
+           color:#f76d2b !important;
+           font-weight: bold !important;
+        }
+        .no-border{
+            border-width:0 !important;
+            border-radius: 0;
+        }
+    }
+
+.price {
+  color:#f76d2b !important;
+  font-weight: bold;
+}
+
+.odd {
+  background-color: #fff;
 }
 
 /* wide-as-needed */
@@ -138,13 +168,16 @@ div.set-rating span {
 }
 
 .bgBlack {
-  background-color: #2956a2;
-  color: #fff;
+  background-color: #222;
+  color: #f76d2b;
   margin-top: -6px;
 }
 
 .bgBlack h3 {
   color: #fff;
+  margin-top:10px !important;
+  font-size: 18px;
+  padding:10px;
 }
 
 .bgBlack p {

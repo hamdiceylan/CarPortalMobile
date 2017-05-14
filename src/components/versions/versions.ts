@@ -18,6 +18,7 @@ export class VersionsComponent {
 
   versions: any;
   model: any;
+  makeName: any;
 
     constructor(
     public params: NavParams,
@@ -25,6 +26,7 @@ export class VersionsComponent {
     public viewCtrl: ViewController,
     public modalCtrl: ModalController)  {
     this.model = params.get('model');
+    this.makeName = params.get('makeName');
     console.log(this.model);
     this.getModels(this.model.id);
   }

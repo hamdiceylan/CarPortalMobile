@@ -39,7 +39,7 @@ export class ModelsComponent {
   }
 
   getVersions(model){
-    let versionModal = this.modalCtrl.create(VersionsComponent, { model: model })
+    let versionModal = this.modalCtrl.create(VersionsComponent, { model: model,makeName:this.makeName })
     versionModal.present();
   }
 

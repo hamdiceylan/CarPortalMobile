@@ -1,3 +1,19 @@
-page-news {
+.card-background-page {
 
+    ion-card {
+        position: relative;
+        text-align: center;
+        margin: 0px 0px 5px 0px;
+        width: calc(100%);
+    }
+
+    .card-title {
+        position: absolute;
+        top: 80%;
+        font-size: 14px;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+        background-color: #222;
+    }
 }
